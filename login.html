@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Dark transparent overlay */
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            color: #b45309; 
+            max-width: 650px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 0 20px;
+            color: #f9f3ef;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .btn {
+            display: block;
+            width: 260px;
+            padding: 15px;
+            margin: 12px auto;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .signIn {
+            background-color: #ff8c42;  
+            color: #ff8c42;
+        }
+        .signIn:hover {
+            background-color: #e76f20;
+        }
+
+        .visitor {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .visitor:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+</a>
+    <div class="overlay">
+        <div class="container">
+            <h1>Welcome to BookSwap</h1>
+
+            <p class="description">
+                BookSwap is a student-friendly platform where you can exchange books, discover new reads, 
+                and connect with others who share your passion for learning. Join our growing community 
+                to borrow, lend, or browse books easily — and for free.
+            </p>
+            <a href="bookswap.html">
+            <button class="btn signin">Sign In</button>
+            </a>
+            <button class="btn visitor">Continue as Visitor</button>
+        </div>
+    </div>
+</body>
+</html>

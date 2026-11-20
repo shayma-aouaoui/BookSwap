@@ -1,0 +1,382 @@
+:root {
+    --brand-primary: #b45309;
+    --brand-secondary: #d97706;
+    --brand-light: #fef3c7;
+    --brand-lighter: #fffbeb;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fef08a 100%);
+    min-height: 100vh;
+}
+
+.max-width-container {
+    max-width: 1200px;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.text-brand {
+    color: var(--brand-primary) !important;
+}
+
+.btn-brand {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    border: none;
+    color: white;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.25);
+}
+
+.btn-brand:hover {
+    background: linear-gradient(135deg, #92400e 0%, #b45309 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(180, 83, 9, 0.35);
+}
+
+.btn-brand:active {
+    transform: translateY(0);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--text-dark);
+    border-color: var(--text-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.form-control-lg,
+.btn-lg {
+    border-radius: 0.75rem;
+}
+
+.form-control,
+.form-control-lg {
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-control-lg:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 0.2rem rgba(180, 83, 9, 0.15);
+}
+
+.input-focus {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.form-check-input:checked {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(180, 83, 9, 0.25);
+    border-color: var(--brand-primary);
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.radio-card {
+    display: block;
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.875rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: white;
+}
+
+.radio-card i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.radio-card p {
+    font-size: 1rem;
+}
+
+.radio-card small {
+    font-size: 0.875rem;
+}
+
+#giverRadio:checked + .radio-card,
+#receiverRadio:checked + .radio-card {
+    border-color: var(--brand-primary);
+    background-color: var(--brand-light);
+    box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.1);
+}
+
+.radio-card:hover {
+    border-color: var(--brand-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border-radius: 1.5rem !important;
+    transition: var(--transition);
+    border: 1px solid var(--border-color) !important;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.header-brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-brand i {
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.header-brand h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.user-avatar {
+    font-size: 6rem;
+    color: var(--brand-primary);
+    animation: pulse-avatar 2s ease-in-out infinite;
+}
+
+@keyframes pulse-avatar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+.rounded-3 {
+    border-radius: 1rem !important;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.bg-light {
+    background-color: var(--brand-lighter) !important;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.badge.bg-brand {
+    background-color: var(--brand-primary) !important;
+}
+
+.lead {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.display-4,
+.display-5 {
+    font-weight: 900;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-dark {
+    color: var(--text-dark) !important;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+}
+
+.page-container {
+    transition: opacity 0.3s ease;
+}
+
+.page-container.d-none {
+    display: none !important;
+}
+
+.list-unstyled li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.lh-lg {
+    line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+    .header-brand h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .user-avatar {
+        font-size: 4rem;
+    }
+
+    .radio-card {
+        padding: 1rem;
+    }
+
+    .radio-card i {
+        font-size: 1.5rem;
+    }
+
+    .radio-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0 !important;
+    }
+
+    .radio-card small {
+        font-size: 0.8rem;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .form-control-lg,
+    .input-focus {
+        padding: 0.75rem 0.875rem;
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+.signup-link {
+  color: var(--brand-primary);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
